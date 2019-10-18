@@ -1,7 +1,6 @@
 import pygame as pg
 import random
 
-
 pg.init()
 clock = pg.time.Clock()
 win = pg.display.set_mode((500, 500))
@@ -103,6 +102,7 @@ while run:
 
     if [snake.x, snake.y] in snake_body[1:]:
         print("lost")
+        print(len(snake_body))
         run = False
 
     newPart = [snake.x, snake.y]
@@ -117,5 +117,4 @@ while run:
 
     window()
 
-run()
 pg.quit()
